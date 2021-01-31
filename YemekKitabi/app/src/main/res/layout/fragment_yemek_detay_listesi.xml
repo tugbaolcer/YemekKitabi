@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="secilenYemek"
+            type="com.olcertugba.yemekkitabi.model.Besin" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:viewBindingIgnore="true"
+        tools:context=".Fragment.YemekDetayListesiFragment">
+
+        <ImageView
+            android:id="@+id/yemekImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:minHeight="200dp"
+            android:scaleType="fitCenter"
+            android:downloadImage="@{secilenYemek.besinGorsel}"
+            android:layout_margin="10dp">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yemekIsim"
+            android:layout_below="@id/yemekImage"
+            android:text="@{secilenYemek.besinIsim}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp"
+            >
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yemekKalori"
+            android:layout_below="@id/yemekIsim"
+            android:text="@{secilenYemek.besinKalori}"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp"
+            >
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yemekKarbonhidrat"
+            android:layout_below="@id/yemekKalori"
+            android:text="@{secilenYemek.besinKarbonhidrat}"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp"
+            >
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yemekProtein"
+            android:layout_below="@id/yemekKarbonhidrat"
+            android:text="@{secilenYemek.besinProtein}"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp"
+            >
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yemekYag"
+            android:layout_below="@id/yemekProtein"
+            android:text="@{secilenYemek.besinYag}"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp"
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+</layout>
